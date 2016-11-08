@@ -1,0 +1,16 @@
+.box-uno{
+	width: 200px;
+	display: inline-block;
+}
+.caja{
+	display: inline-block;
+	float: left;
+	margin-right: 1%;
+	width: 200px;
+}
+.text-añadir{
+	display: inline-block;
+}
+.text-hide{
+	display: none;
+}
