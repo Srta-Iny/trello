@@ -22,7 +22,6 @@ function anadirLista(){
 	var	contenedor = document.createElement('div');
 	var spanTarjeta = document.createElement('span');
 	var contenedorBoton = document.createElement('div');
-	//var labelTarjeta = document.createElement('label');
 	var inputTarjeta = document.createElement('textarea');
 	var botonTarjeta = document.createElement('button');
 //añadir atributos
@@ -30,20 +29,22 @@ function anadirLista(){
 	titulo.setAttribute('class', 'titulo');
 	contenedor.setAttribute('class', 'click');
 	contenedorBoton.setAttribute('class', 'text-hide');
+	spanTarjeta.setAttribute('class', 'spanTarjeta');
 	inputTarjeta.setAttribute('rows', '2');
 	inputTarjeta.setAttribute('class', 'form-control');
-	//inputTarjeta.setAttribute('autofocus''autofocus');
 	inputTarjeta.setAttribute('placeholder', 'Añadir una tarjeta...')
 	botonTarjeta.setAttribute('type', 'submit');
-	botonTarjeta.setAttribute("class", "btn btn-success btn-sm enviar");
+	botonTarjeta.setAttribute("class", "btn btn-default btn-sm enviar");
 //toggle
 	contenedor.addEventListener("click", function(event){
 		ocultar(spanTarjeta, contenedorBoton);
+		inputTarjeta.focus();
 	});	
 //texto boton
 	spanTarjeta.innerHTML='Añadir una tarjeta...';
 	botonTarjeta.innerHTML='Añadir';
 //agregar tarjeta 
+	
 	botonTarjeta.addEventListener("click", function(event){
 		anadirTarjeta(this);
 	});
@@ -54,7 +55,6 @@ function anadirLista(){
 	//agregando tareas
 		titulo.appendChild(nombreLista);
 		contenedorTitulo.appendChild(titulo);
-		//contenedorBoton.appendChild(labelTarjeta);
 		contenedorBoton.appendChild(inputTarjeta);
 		contenedorBoton.appendChild(botonTarjeta);
 		contenedor.appendChild(spanTarjeta);
@@ -73,8 +73,9 @@ function ocultar(a,b) {
 }
 function anadirTarjeta(boton){
 	var contenedor = boton.parentNode;
-	var texto = contenedor.getElementsByTagName('input');
+	var texto = contenedor.getElementsByTagName('textarea');
 	var contenedorLista = contenedor.parentNode;
+
 	console.log(texto);
 //nodo texto
 	var nodoTarjeta = document.createTextNode(texto[0].value);
@@ -82,6 +83,7 @@ function anadirTarjeta(boton){
 	var contenedorTarjeta = document.createElement('div');
 	var tarjeta= document.createElement('textarea');
 // añadir atributos
+	contenedorTarjeta.setAttribute('class', 'contenedorTarjeta');
 	tarjeta.setAttribute('class', 'form-control');
 	tarjeta.setAttribute('rows', '3')
 	//comprobar texto
@@ -96,4 +98,6 @@ function anadirTarjeta(boton){
 	}
 // dejando espacio en blanco
 	texto[0].value = "";
+
+	
 }

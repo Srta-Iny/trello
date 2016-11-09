@@ -1,3 +1,9 @@
+body{
+	background: #555;
+	background-image: url("../img/zenbg-1.png"), url("../img/zenbg-2.png");
+	background-repeat: repeat-x, repeat;
+}
+
 .box-uno{
 	width: 200px;
 	display: inline-block;
@@ -6,11 +12,62 @@
 	display: inline-block;
 	float: left;
 	margin-right: 1%;
-	width: 200px;
+	width: 250px;
 }
 .text-añadir{
 	display: inline-block;
 }
 .text-hide{
 	display: none;
+}
+.focus{
+
+}
+.blanco{
+	color: #fff;
+}
+/*header*/
+.logo{
+	display: inline-block;
+	width: 70px;
+	margin: 10px auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.navbar-default {
+	background-color: #555;
+}
+.btn-default{
+	background-color: #ccc;
+}
+/*buscador*/
+.container-1{
+	position: relative;
+}
+.container-1 i{
+	position: absolute;
+	top: 30%;;
+	right: 10%;
+	margin-left: 17px;
+	z-index:1;
+	color: rgba(128, 128, 128, 0.36);
+}
+/*tarjeta*/
+.contenedorTarjeta{
+	margin: 2% 0;
+}
+.enviar{
+	margin-top: 2%;
+}
+.titulo{
+	font-weight: bold;
+}
+#mos{
+	cursor: pointer;
+	font-weight: bold;
+}
+.spanTarjeta{
+	cursor: pointer;
+	font-weight: bold;
 }
